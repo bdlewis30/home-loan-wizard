@@ -49,4 +49,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, { updateLoanType, updatePropertyType })(WizardOne);
+export default connect(mapStateToProps, { updateLoanType, updatePropertyType })(WizardOne); 

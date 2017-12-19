@@ -21,6 +21,7 @@ const INTITIALSTATE = {
 //Action Types
 const UPDATE_LOAD_TYPE = "UPDATE_LOAN_TYPE";
 const UPDATE_PROPERTY_TYPE = "UPDATE_PROPERTY_TYPE";
+const UPDATE_CITY = 'UPDATE)CITY';
 
 // Adding a Switch to the reducer function is how our reducer will determine which part of state to update.
 function reducer(state = INTITIALSTATE, action) {
@@ -30,6 +31,9 @@ function reducer(state = INTITIALSTATE, action) {
 
         case UPDATE_PROPERTY_TYPE:
             return Object.assign({}, state, { propertyType: action.payload });
+
+        case UPDATE_CITY:
+            return Object.assign({}, state, { city: action.payload });
 
         default: return state;
     }
@@ -47,6 +51,13 @@ export function updatePropertyType(property) {
     return {
         type: UPDATE_PROPERTY_TYPE,
         payload: property
+    }
+}
+
+export function updateCity(city) {
+    return {
+        type: UPDATE_CITY,
+        payload: city
     }
 }
 
